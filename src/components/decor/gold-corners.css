@@ -1,0 +1,63 @@
+.gold-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  color: rgba(185, 137, 62, 0.65);
+}
+
+.gc {
+  position: absolute;
+  width: clamp(56px, 11vw, 96px);
+  display: block;
+  opacity: 0;
+  transition: opacity 1.2s ease 0.8s;
+}
+
+.hero.revealed .gc {
+  opacity: 1;
+}
+
+.gc svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gc-tl {
+  top: clamp(70px, 12vh, 96px);
+  left: clamp(10px, 2vw, 24px);
+}
+
+.gc-tr {
+  top: clamp(70px, 12vh, 96px);
+  right: clamp(10px, 2vw, 24px);
+  transform: scaleX(-1);
+}
+
+.gc-bl,
+.gc-br {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .gc {
+    width: 40px;
+    opacity: 0.55;
+  }
+
+  .hero.revealed .gc {
+    opacity: 0.55;
+  }
+
+  .gc-tl,
+  .gc-tr {
+    top: 78px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-corners {
+    display: none;
+  }
+}
