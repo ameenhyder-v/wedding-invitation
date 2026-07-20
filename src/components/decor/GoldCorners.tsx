@@ -1,8 +1,6 @@
-import "./gold-corners.css";
-
 function Corner() {
   return (
-    <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none" aria-hidden="true" className="block h-auto w-full">
       <path
         d="M8 8 C30 10 24 38 48 44 C70 50 66 18 92 26 C106 30 110 48 116 54"
         stroke="currentColor"
@@ -26,19 +24,24 @@ function Corner() {
   );
 }
 
-export default function GoldCorners() {
+export default function GoldCorners({ revealed = false }: { revealed?: boolean }) {
+  const cornerBase = `absolute block w-[clamp(56px,11vw,96px)] opacity-0 transition-opacity duration-[1200ms] ease-out delay-[800ms] max-[720px]:w-10 ${
+    revealed ? "opacity-100 max-[720px]:opacity-55" : ""
+  }`;
+
   return (
-    <div className="gold-corners" aria-hidden="true">
-      <span className="gc gc-tl">
+    <div
+      className="pointer-events-none absolute inset-0 z-5 text-gold/65 max-[480px]:hidden"
+      aria-hidden="true"
+    >
+      <span
+        className={`${cornerBase} top-[clamp(70px,12vh,96px)] left-[clamp(10px,2vw,24px)] max-[720px]:top-[78px]`}
+      >
         <Corner />
       </span>
-      <span className="gc gc-tr">
-        <Corner />
-      </span>
-      <span className="gc gc-bl">
-        <Corner />
-      </span>
-      <span className="gc gc-br">
+      <span
+        className={`${cornerBase} top-[clamp(70px,12vh,96px)] right-[clamp(10px,2vw,24px)] -scale-x-100 max-[720px]:top-[78px]`}
+      >
         <Corner />
       </span>
     </div>

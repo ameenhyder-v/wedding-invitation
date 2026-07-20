@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import "./decor.css";
 
 interface SparkleSpec {
   left: number;
@@ -24,11 +23,11 @@ export default function Sparkles({ count = 18 }: { count?: number }) {
   );
 
   return (
-    <div className="sparkles" aria-hidden="true">
+    <div className="sparkles pointer-events-none absolute inset-0 z-2 overflow-hidden" aria-hidden="true">
       {sparkles.map((s, i) => (
         <span
           key={i}
-          className="sparkle"
+          className="sparkle absolute rounded-full bg-[radial-gradient(circle,var(--color-gold-pale)_0%,var(--color-gold)_55%,transparent_70%)] opacity-0 shadow-[0_0_6px_rgba(231,211,164,0.7)] animate-sparkle-twinkle"
           style={{
             left: `${s.left}%`,
             top: `${s.top}%`,

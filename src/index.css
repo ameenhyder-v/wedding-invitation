@@ -1,1 +1,250 @@
-@import "./styles/base.css";
+@import "tailwindcss";
+
+@theme {
+  --color-maroon-deep: #4a0e1c;
+  --color-maroon: #7b1d2e;
+  --color-maroon-soft: #9b3446;
+  --color-gold: #b9893e;
+  --color-gold-light: #e7d3a4;
+  --color-gold-pale: #f3e8cd;
+  --color-cream: #fdf9f2;
+  --color-silk: #faf4ea;
+  --color-ink: #33191a;
+  --color-ink-soft: #6d5248;
+  --color-night: #1a060c;
+  --color-night-deep: #0a0507;
+
+  --font-script: "Great Vibes", cursive;
+  --font-names: "Allura", cursive;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-caps: "Cinzel", serif;
+  --font-arabic: "Amiri", serif;
+  --font-sans: "Jost", sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --animate-petal-fall: petal-fall linear infinite;
+  --animate-shimmer-sweep: shimmer-sweep 5.5s ease-in-out infinite;
+  --animate-shimmer-sweep-slow: shimmer-sweep 6s ease-in-out infinite;
+  --animate-soft-float: soft-float 3.4s ease-in-out infinite;
+  --animate-sparkle-twinkle: sparkle-twinkle ease-in-out infinite;
+  --animate-ambient-drift: ambient-drift 16s ease-in-out infinite;
+  --animate-load-ken: load-ken 4.2s ease-out forwards;
+  --animate-load-emblem: load-emblem 1.35s var(--ease-out-soft) 0.1s forwards;
+  --animate-load-rise: load-rise 0.9s ease forwards;
+  --animate-load-progress: load-progress 1.7s ease 1.4s forwards;
+  --animate-load-ring: load-ring 3.2s ease-in-out infinite;
+  --animate-scroll-hint: scroll-hint 1.8s ease-in-out infinite;
+  --animate-scroll-hint-dot: scroll-hint-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--sway, 40px), 108vh, 0) rotate(var(--spin, 320deg));
+    opacity: 0.15;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0%,
+  55% {
+    background-position: -180% center;
+  }
+  100% {
+    background-position: 180% center;
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  40%,
+  60% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+@keyframes ambient-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8px, -12px, 0);
+  }
+}
+
+@keyframes load-ken {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes load-emblem {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes load-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes load-progress {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes load-ring {
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.85;
+  }
+}
+
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes scroll-hint-dot {
+  0% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  45% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(14px);
+    opacity: 0.2;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans overflow-x-clip antialiased;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  @media (max-width: 1100px) {
+    html {
+      scroll-padding-top: 52px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html {
+      scroll-padding-top: 56px;
+    }
+  }
+
+
+  ::selection {
+    background: rgba(185, 137, 62, 0.28);
+    color: var(--color-maroon-deep);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility text-shimmer {
+  background: linear-gradient(100deg, #f3e8cd 35%, #b9893e 50%, #f3e8cd 65%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: var(--animate-shimmer-sweep);
+}
+
+@utility text-shimmer-slow {
+  background: linear-gradient(100deg, #f3e8cd 35%, #b9893e 50%, #f3e8cd 65%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: var(--animate-shimmer-sweep-slow);
+}
+
+@utility mask-fade-b {
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+}
+
+@utility mask-fade-b-mid {
+  -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+}
+
+@utility mask-fade-t {
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 35%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 35%, #000 100%);
+}

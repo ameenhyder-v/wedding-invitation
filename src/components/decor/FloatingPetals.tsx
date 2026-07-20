@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import "./decor.css";
 
 const PETAL_COLORS = ["#7b1d2e", "#9b3446", "#5d1424", "#b9893e"];
 
@@ -30,11 +29,11 @@ export default function FloatingPetals({ count = 14 }: { count?: number }) {
   );
 
   return (
-    <div className="petals" aria-hidden="true">
+    <div className="petals pointer-events-none absolute inset-0 z-2 overflow-hidden" aria-hidden="true">
       {petals.map((p, i) => (
         <svg
           key={i}
-          className="petal"
+          className="petal absolute top-[-30px] animate-petal-fall drop-shadow-[0_2px_3px_rgba(74,14,28,0.25)] will-change-transform"
           style={{
             left: `${p.left}%`,
             width: p.size,
