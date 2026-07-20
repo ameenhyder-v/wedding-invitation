@@ -60,4 +60,10 @@ export const CONTENT = {
     message:
       "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n\nYou're invited to the wedding reception of Ajmal & Asna\nHosted by the family of Ahammedkutty & Thahira\nThursday, 10 September 2026 · 4 PM\nPearl Regency — Auditorium, Nelluvai, Thrissur\n\nPlease join us with your duas 🤍",
   },
+
+  // Soft loop — replace /public/audio/ambient.mp3 with your own track if you prefer
+  audio: {
+    src: "/audio/ambient.mp3",
+    volume: 0.32,
+  },
 };

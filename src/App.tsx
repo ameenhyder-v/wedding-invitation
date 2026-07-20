@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import LoadingScreen from "./components/intro/LoadingScreen";
 import NavBar from "./components/chrome/NavBar";
 import ShareFab from "./components/chrome/ShareFab";
+import BackgroundMusic from "./components/chrome/BackgroundMusic";
 import ScrollHint from "./components/chrome/ScrollHint";
 import Hero from "./components/sections/Hero";
 import Footer from "./components/sections/Footer";
@@ -25,6 +26,7 @@ export default function App() {
       className="group bg-night overflow-x-clip"
       data-state={ready ? "ready" : "loading"}
     >
+      <BackgroundMusic loaderVisible={!loaderGone} />
       {!loaderGone && (
         <LoadingScreen
           onHandoffStart={onHandoffStart}
