@@ -29,7 +29,7 @@ export default function Hero({
     return () => clearTimeout(id);
   }, [active]);
 
-  const { couple, hero } = CONTENT;
+  const { couple, hero, family } = CONTENT;
   const placeHref = mapsPlaceUrl(hero.mapQuery);
   const groomName = displayName(couple.groom);
   const brideName = displayName(couple.bride);
@@ -125,7 +125,16 @@ export default function Hero({
           </h1>
 
           <p
-            className={`font-caps mx-auto max-w-[380px] text-[clamp(10px,0.3vw+0.55rem,12px)] leading-[1.7] tracking-[2px] text-gold-light/78 uppercase text-balance min-[721px]:max-[1100px]:mt-2 min-[721px]:max-[1100px]:max-w-[460px] min-[721px]:max-[1100px]:text-[clamp(11px,1.5vw,14px)] min-[721px]:max-[1100px]:tracking-[2.2px] max-[720px]:mt-2 max-[720px]:max-w-[300px] max-[720px]:px-2 max-[720px]:text-[9px] max-[720px]:tracking-[1.4px] max-[720px]:leading-[1.55] max-h-[500px]:landscape:hidden ${revealItem("delay-[580ms]")}`}
+            className={`font-caps mt-1 px-1 text-[clamp(9px,0.3vw+0.5rem,11px)] leading-[1.7] tracking-[2px] text-gold-pale/72 uppercase text-balance min-[721px]:max-[1100px]:mt-1.5 min-[721px]:max-[1100px]:text-[clamp(11px,1.4vw,13px)] min-[721px]:max-[1100px]:tracking-[2.2px] max-[720px]:mt-1 max-[720px]:text-[9px] max-[720px]:tracking-[1.2px] max-[390px]:text-[8.5px] ${revealItem("delay-[540ms]")}`}
+          >
+            {hero.brideOfLine}
+            <span className="font-serif mt-0.5 block text-[clamp(16px,1.2vw+0.55rem,22px)] tracking-[0.3px] text-gold-light normal-case italic min-[721px]:max-[1100px]:text-[clamp(18px,2.4vw,24px)] max-[720px]:text-[clamp(15px,4vw,18px)]">
+              {family.brideParents}
+            </span>
+          </p>
+
+          <p
+            className={`font-caps mx-auto mt-2.5 max-w-[380px] text-[clamp(10px,0.3vw+0.55rem,12px)] leading-[1.7] tracking-[2px] text-gold-light/78 uppercase text-balance min-[721px]:max-[1100px]:mt-3 min-[721px]:max-[1100px]:max-w-[460px] min-[721px]:max-[1100px]:text-[clamp(11px,1.5vw,14px)] min-[721px]:max-[1100px]:tracking-[2.2px] max-[720px]:mt-2 max-[720px]:max-w-[300px] max-[720px]:px-2 max-[720px]:text-[9px] max-[720px]:tracking-[1.4px] max-[720px]:leading-[1.55] max-h-[500px]:landscape:hidden ${revealItem("delay-[620ms]")}`}
           >
             Your presence and blessings will make this occasion even more special
           </p>

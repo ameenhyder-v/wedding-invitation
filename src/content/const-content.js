@@ -11,26 +11,27 @@ export const CONTENT = {
   },
 
   family: {
-    brideParents: "Fathima & Kareem",
+    brideParents: "Mr. Saleem K A & Mrs. Namitha Saleem",
     brideHouse: "Erumapetty",
-    groomParents: "Ahammedkutty & Thahira",
+    groomParents: "Mr. Ahammedkutty & Mrs. Thahira",
     groomHouse: "Kanjirakodu",
   },
 
   // Used for the countdown — reception date & time
-  weddingDateISO: "2026-09-10T16:00:00",
+  weddingDateISO: "2026-09-10T16:30:00",
 
   hero: {
     bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     bismillahMeaning: "In the name of Allah, the Most Gracious, the Most Merciful",
     hostLine: "With the blessings of Allah, the family of",
-    hostFamily: "Ahammedkutty & Thahira",
+    hostFamily: "Mr. Ahammedkutty & Mrs. Thahira",
     inviteLine: "joyfully welcome you to the wedding reception of their son",
+    brideOfLine: "Daughter of",
     dateBar: {
       day: "Thursday",
       dateNum: "10",
       monthYear: "September 2026",
-      time: "At 4 PM",
+      time: "At 4:30 PM",
     },
     venue: "Pearl Regency",
     venueDetail: "Auditorium",
@@ -58,7 +59,7 @@ export const CONTENT = {
 
   share: {
     message:
-      "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n\nYou're invited to the wedding reception of Ajmal & Asna\nHosted by the family of Ahammedkutty & Thahira\nThursday, 10 September 2026 · 4 PM\nPearl Regency — Auditorium, Nelluvai, Thrissur\n\nPlease join us with your duas 🤍",
+      "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n\nYou're invited to the wedding reception of Ajmal & Asna\nHosted by the family of Mr. Ahammedkutty & Mrs. Thahira\nThursday, 10 September 2026 · 4:30 PM\nPearl Regency — Auditorium, Nelluvai, Thrissur\n\nPlease join us with your duas 🤍",
   },
 
   // Soft loop — replace /public/audio/ambient.mp3 with your own track if you prefer

@@ -59,7 +59,7 @@ export default function Footer() {
           {footer.closing}
         </p>
 
-        <p className="mt-4 mb-0 font-sans text-[8px] leading-relaxed tracking-[0.14em] text-gold-pale/22 max-[720px]:mt-3 max-[720px]:text-[7.5px]">
+        <p className="mt-4 mb-0 font-sans text-[9px] leading-relaxed tracking-[0.14em] text-gold-pale/22 max-[720px]:mt-3 max-[720px]:text-[7.5px]">
           © All rights reserved ·{" "}
           <a
             href="https://ameenhyder.online"
