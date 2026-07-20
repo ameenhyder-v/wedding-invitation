@@ -17,20 +17,20 @@ export const CONTENT = {
     groomHouse: "Kanjirakodu",
   },
 
-  // Used for the countdown — set to the Nikah date & time
-  weddingDateISO: "2026-09-10T09:00:00",
+  // Used for the countdown — reception date & time
+  weddingDateISO: "2026-09-10T16:00:00",
 
   hero: {
     bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     bismillahMeaning: "In the name of Allah, the Most Gracious, the Most Merciful",
     hostLine: "With the blessings of Allah, the family of",
     hostFamily: "Ahammedkutty & Thahira",
-    inviteLine: "joyfully invite you to the Nikah of their son",
+    inviteLine: "joyfully welcome you to the wedding reception of their son",
     dateBar: {
       day: "Thursday",
       dateNum: "10",
       monthYear: "September 2026",
-      time: "At 9 AM",
+      time: "At 4 PM",
     },
     venue: "Pearl Regency",
     venueDetail: "Auditorium",
@@ -48,7 +48,7 @@ export const CONTENT = {
   invitation: {
     eyebrow: "From the groom's family",
     message:
-      "Your presence and duas will complete our joy. Kindly grace the Nikah with your blessings.",
+      "Your presence and duas will complete our joy. Kindly grace the reception with your blessings.",
   },
 
   footer: {
@@ -58,6 +58,6 @@ export const CONTENT = {
 
   share: {
     message:
-      "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n\nYou're invited to the Nikah of Ajmal & Asna\nHosted by the family of Ahammedkutty & Thahira\nThursday, 10 September 2026 · 9 AM\nPearl Regency — Auditorium, Nelluvai, Thrissur\n\nPlease join us with your duas 🤍",
+      "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n\nYou're invited to the wedding reception of Ajmal & Asna\nHosted by the family of Ahammedkutty & Thahira\nThursday, 10 September 2026 · 4 PM\nPearl Regency — Auditorium, Nelluvai, Thrissur\n\nPlease join us with your duas 🤍",
   },
 };

@@ -13,7 +13,7 @@ export default function ArabesqueCorner({
 
   return (
     <svg
-      className={`arabesque-corner ${className}`}
+      className={`h-auto w-[clamp(52px,12vw,88px)] opacity-72 text-gold ${className}`}
       viewBox="0 0 120 120"
       fill="none"
       aria-hidden="true"
