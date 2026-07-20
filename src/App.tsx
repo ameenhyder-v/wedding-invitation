@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <main
-      className="group min-h-svh bg-night"
+      className="group bg-night overflow-x-clip"
       data-state={ready ? "ready" : "loading"}
     >
       {!loaderGone && (
@@ -32,7 +32,7 @@ export default function App() {
         />
       )}
       <div
-        className={`transition-opacity duration-[700ms] ease-out ${
+        className={`transition-opacity duration-[700ms] ease-out overflow-x-clip ${
           ready ? "opacity-100" : "opacity-0"
         }`}
       >

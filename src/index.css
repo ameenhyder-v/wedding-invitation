@@ -166,6 +166,8 @@
     scroll-padding-top: 76px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background-color: var(--color-night);
+    overscroll-behavior-y: none;
   }
 
   html::-webkit-scrollbar {
@@ -175,10 +177,16 @@
   }
 
   body {
-    @apply bg-cream text-ink font-sans overflow-x-clip antialiased;
+    @apply bg-night text-ink font-sans overflow-x-clip antialiased;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overscroll-behavior-y: none;
+  }
+
+  #root {
+    @apply bg-night;
+    min-height: 0;
   }
 
   body::-webkit-scrollbar {

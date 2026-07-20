@@ -42,7 +42,7 @@ export default function Hero({
   return (
     <section
       id="home"
-      className={`group/hero relative z-2 flex min-h-svh items-center justify-center overflow-x-clip overflow-y-visible px-[clamp(16px,3vw,40px)] pt-[clamp(64px,8vh,88px)] pb-[clamp(24px,4vh,40px)] text-gold-pale scroll-mt-[76px] bg-[radial-gradient(ellipse_at_25%_60%,rgba(123,29,46,0.35),transparent_50%),radial-gradient(ellipse_at_80%_30%,rgba(185,137,62,0.12),transparent_45%),linear-gradient(195deg,#0a0507_0%,#1a060c_55%,#1a060c_100%)] max-[1100px]:z-1 max-[1100px]:min-h-0 max-[1100px]:items-start max-[1100px]:px-0 max-[1100px]:pt-[52px] max-[1100px]:pb-7 max-[720px]:pt-[52px] max-[720px]:pb-5 max-[390px]:pt-12 max-[390px]:pb-4 max-h-[500px]:landscape:min-h-0 max-h-[500px]:landscape:px-4 max-h-[500px]:landscape:pt-12 max-h-[500px]:landscape:pb-4 ${
+      className={`group/hero relative z-2 flex min-h-svh items-center justify-center overflow-x-clip overflow-y-clip px-[clamp(16px,3vw,40px)] pt-[clamp(64px,8vh,88px)] pb-[clamp(24px,4vh,40px)] text-gold-pale scroll-mt-[76px] bg-[radial-gradient(ellipse_at_25%_60%,rgba(123,29,46,0.35),transparent_50%),radial-gradient(ellipse_at_80%_30%,rgba(185,137,62,0.12),transparent_45%),linear-gradient(195deg,#0a0507_0%,#1a060c_55%,#1a060c_100%)] max-[1100px]:z-1 max-[1100px]:min-h-0 max-[1100px]:items-start max-[1100px]:px-0 max-[1100px]:pt-[52px] max-[1100px]:pb-7 max-[720px]:pt-[52px] max-[720px]:pb-5 max-[390px]:pt-12 max-[390px]:pb-4 max-h-[500px]:landscape:min-h-0 max-h-[500px]:landscape:px-4 max-h-[500px]:landscape:pt-12 max-h-[500px]:landscape:pb-4 ${
         revealed ? "is-revealed" : ""
       }`}
     >
@@ -61,7 +61,7 @@ export default function Hero({
         aria-hidden="true"
       />
       <GoldCorners revealed={revealed} />
-      <div className="max-[1100px]:[&_.petal:nth-child(n+7)]:hidden max-[1100px]:[&_.sparkle:nth-child(n+12)]:hidden max-[720px]:[&_.petals]:overflow-visible">
+      <div className="max-[1100px]:[&_.petal:nth-child(n+7)]:hidden max-[1100px]:[&_.sparkle:nth-child(n+12)]:hidden">
         <FloatingPetals count={8} />
         <Sparkles count={10} />
       </div>
